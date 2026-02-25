@@ -11,48 +11,51 @@
 
 @* キーボードイベントを補足するためのダミーインプットではなく、Window レベルで JSInterop 経由で補足する仕組みを想定 *@
 <div class="app-container" tabindex="0" @ref="containerRef" @onkeydown="HandleKeyDown" @onkeydown:preventDefault="true">
-    
+
     <div class="top-area">
         <div class="target-panel">
             @if (GameState.IsSessionComplete)
             {
-                <div class="message" style="display:none;"></div>
+                    <div class="message" style="display:none;"></div>
             }
             else if (CurrentProblem != null)
             {
-                <div class="hiragana">@CurrentProblem.Hiragana</div>
-                <div class="romaji">
+                    <div class="hiragana">@CurrentProblem.Hiragana</div>
+                    <div class="romaji">
                     @* すでに入力された部分と未入力部分を分ける等 *@
-                    <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
-                </div>
+                        <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
+                    </div>
             }
             else
             {
-                <div class="message">スペースキーを押して開始！</div>
+                    <div class="message">スペースキーを押して開始！</div>
             }
         </div>
-        
+
         <MatrixDisplay AcquiredSyllables="AcquiredPoints" />
     </div>
 
     <div class="middle-area">
         <div class="combo-display">
             コンボ: @(new string('★', GameState.CurrentCombo))
-            @if(GameState.CurrentCombo == 0) { <span>☆</span> }
+            @if (GameState.CurrentCombo == 0)
+            {
+                <span>☆</span>
+            }
         </div>
     </div>
 
     <div class="bottom-area">
         @if (GameState.IsSessionComplete)
         {
-            <!-- ダッシュボードを画面全体に被せるのではなく、このままエリアをハックして表示する簡易実装（PWAとしてはオーバーレイの方がきれいだが今回はコンポーネント入れ替えで） -->
-            <div style="position: absolute; top:0; left:0; width:100vw; height:100vh; z-index: 100;">
-                <Dashboard OnNextSessionRequest="StartNextSession" />
-            </div>
+                <!-- ダッシュボードを画面全体に被せるのではなく、このままエリアをハックして表示する簡易実装（PWAとしてはオーバーレイの方がきれいだが今回はコンポーネント入れ替えで） -->
+                <div style="position: absolute; top:0; left:0; width:100vw; height:100vh; z-index: 100;">
+                    <Dashboard OnNextSessionRequest="StartNextSession" />
+                </div>
         }
         else
         {
-            <VirtualKeyboard State="Keyboard" />
+                <VirtualKeyboard State="Keyboard" />
         }
     </div>
 
@@ -77,7 +80,7 @@
             GameState.LoadData();
             StateHasChanged();
             // コンテナにフォーカスを当ててキーボードイベントを受け取れるようにする
-            await JS.InvokeVoidAsync("HTMLElement.prototype.focus.call", containerRef);
+            await JS.InvokeVoidAsync("focusElement", containerRef);
         }
     }
 
@@ -108,24 +111,24 @@
         {
             // 正解ルートに乗っている
             Keyboard.HasError = false;
-            
+
             // 完全に一致するパターンがあれば正解
             if (matchingPatterns.Any(p => p == CurrentInputBuffer))
             {
                 // 正解！ 
-                try { _ = JS.InvokeVoidAsync("playAudio", "sound-correct"); } catch {}
+                try { _ = JS.InvokeVoidAsync("playAudio", "sound-correct"); } catch { }
 
                 // 正解の文字（母音）を取得してMatrixのキーにする
                 var vowel = CurrentProblem.PrimaryRomaji.Last().ToString();
                 AcquiredPoints.Add($"{CurrentProblem.MatrixRow}{vowel}");
-                
+
                 GameState.AddCombo();
                 GameState.GoalProblem();
 
                 if (GameState.IsSessionComplete)
                 {
                     CurrentProblem = null; // リザルト表示待ち状態に
-                    // 画面の再描画で Dashboard が表示される
+                                           // 画面の再描画で Dashboard が表示される
                 }
                 else
                 {
@@ -145,12 +148,12 @@
             // いずれのパターンにもマッチしない＝エラー
             Keyboard.HasError = true;
             Keyboard.LastErrorKey = inputChar;
-            
-            try { _ = JS.InvokeVoidAsync("playAudio", "sound-error"); } catch {}
+
+            try { _ = JS.InvokeVoidAsync("playAudio", "sound-error"); } catch { }
 
             GameState.ResetCombo();
             CurrentInputBuffer = CurrentInputBuffer.Substring(0, CurrentInputBuffer.Length - 1); // ロールバック
-            
+
             // エラー後は Primary のルートを再提示する
             Keyboard.ExpectedKey = CurrentProblem.PrimaryRomaji[CurrentInputBuffer.Length].ToString();
             Keyboard.NavigationTargetKey = ""; // エラー時は黄色を消して緑点滅のみ
@@ -161,9 +164,9 @@
     {
         CurrentInputBuffer = "";
         Keyboard.HasError = false;
-        
+
         CurrentProblem = Generator.GenerateProblem(GameState.CurrentStage);
-        
+
         Keyboard.ExpectedKey = CurrentProblem.PrimaryRomaji[0].ToString();
         Keyboard.NavigationTargetKey = Keyboard.ExpectedKey;
     }
@@ -177,7 +180,7 @@
     }
 
     private string GetTypedPortion() => CurrentProblem != null ? CurrentInputBuffer : "";
-    private string GetUntypedPortion() 
+    private string GetUntypedPortion()
     {
         if (CurrentProblem == null) return "";
         // Untyped部分は、PrimaryRomajiをベースに表示する（実際の入力が訓令式等に分岐した場合の対応は複雑になるため簡易化）

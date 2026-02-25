@@ -33,6 +33,10 @@
     </div>
     <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
     <script>navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' });</script>
-<script>window.playAudio = (elementId) => { document.getElementById(elementId).currentTime = 0; document.getElementById(elementId).play(); }</script></body>
+    <script>
+        window.playAudio = (elementId) => { try { document.getElementById(elementId).currentTime = 0; document.getElementById(elementId).play(); } catch (e) { } };
+        window.focusElement = (element) => { if (element) element.focus(); };
+    </script>
+</body>
 
 </html>
