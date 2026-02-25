@@ -9,228 +9,6 @@
   "ProjectWorkspaceState": {
     "TagHelpers": [
       {
-        "HashCode": -1491856902,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.App",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "App"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "RomanMatrixBuilder",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 1491539398,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.App",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.App"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.App",
-          "Common.TypeNameIdentifier": "App",
-          "Common.TypeNamespace": "RomanMatrixBuilder",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1495636034,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Counter",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Counter"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Counter",
-          "Common.TypeNameIdentifier": "Counter",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -664209068,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Counter",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Pages.Counter"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Counter",
-          "Common.TypeNameIdentifier": "Counter",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -123101329,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Home",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Home"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Home",
-          "Common.TypeNameIdentifier": "Home",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 524252564,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Home",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Pages.Home"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Home",
-          "Common.TypeNameIdentifier": "Home",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -453215689,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.NotFound",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "NotFound"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.NotFound",
-          "Common.TypeNameIdentifier": "NotFound",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1117885060,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.NotFound",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Pages.NotFound"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.NotFound",
-          "Common.TypeNameIdentifier": "NotFound",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 649508002,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Weather",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Weather"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Weather",
-          "Common.TypeNameIdentifier": "Weather",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1640955374,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Weather",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Pages.Weather"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Weather",
-          "Common.TypeNameIdentifier": "Weather",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1600840616,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Index",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
-          "Common.TypeNameIdentifier": "Index",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": -1126164521,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Index",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
-          "Common.TypeNameIdentifier": "Index",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
         "HashCode": -1101890831,
         "Kind": "Components.Component",
         "Name": "RomanMatrixBuilder.Components.Dashboard",
@@ -292,65 +70,6 @@
         }
       },
       {
-        "HashCode": -738704766,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Components.MatrixDisplay",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "MatrixDisplay"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "AcquiredSyllables",
-            "TypeName": "System.Collections.Generic.HashSet<System.String>",
-            "Metadata": {
-              "Common.PropertyName": "AcquiredSyllables",
-              "Common.GloballyQualifiedTypeName": "global::System.Collections.Generic.HashSet<global::System.String>"
-            }
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Components.MatrixDisplay",
-          "Common.TypeNameIdentifier": "MatrixDisplay",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Components",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 1378067077,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Components.MatrixDisplay",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Components.MatrixDisplay"
-          }
-        ],
-        "BoundAttributes": [
-          {
-            "Kind": "Components.Component",
-            "Name": "AcquiredSyllables",
-            "TypeName": "System.Collections.Generic.HashSet<System.String>",
-            "Metadata": {
-              "Common.PropertyName": "AcquiredSyllables",
-              "Common.GloballyQualifiedTypeName": "global::System.Collections.Generic.HashSet<global::System.String>"
-            }
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Components.MatrixDisplay",
-          "Common.TypeNameIdentifier": "MatrixDisplay",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Components",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
         "HashCode": 255201412,
         "Kind": "Components.Component",
         "Name": "RomanMatrixBuilder.Components.VirtualKeyboard",
@@ -404,6 +123,65 @@
         "Metadata": {
           "Common.TypeName": "RomanMatrixBuilder.Components.VirtualKeyboard",
           "Common.TypeNameIdentifier": "VirtualKeyboard",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Components",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -738704766,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.Components.MatrixDisplay",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "MatrixDisplay"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "AcquiredSyllables",
+            "TypeName": "System.Collections.Generic.HashSet<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "AcquiredSyllables",
+              "Common.GloballyQualifiedTypeName": "global::System.Collections.Generic.HashSet<global::System.String>"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.Components.MatrixDisplay",
+          "Common.TypeNameIdentifier": "MatrixDisplay",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Components",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1378067077,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.Components.MatrixDisplay",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RomanMatrixBuilder.Components.MatrixDisplay"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "AcquiredSyllables",
+            "TypeName": "System.Collections.Generic.HashSet<System.String>",
+            "Metadata": {
+              "Common.PropertyName": "AcquiredSyllables",
+              "Common.GloballyQualifiedTypeName": "global::System.Collections.Generic.HashSet<global::System.String>"
+            }
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.Components.MatrixDisplay",
+          "Common.TypeNameIdentifier": "MatrixDisplay",
           "Common.TypeNamespace": "RomanMatrixBuilder.Components",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
@@ -516,38 +294,112 @@
         }
       },
       {
-        "HashCode": -1405443651,
+        "HashCode": -453215689,
         "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Layout.NavMenu",
+        "Name": "RomanMatrixBuilder.Pages.NotFound",
         "AssemblyName": "RomanMatrixBuilder",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "NavMenu"
+            "TagName": "NotFound"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Layout.NavMenu",
-          "Common.TypeNameIdentifier": "NavMenu",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Layout",
+          "Common.TypeName": "RomanMatrixBuilder.Pages.NotFound",
+          "Common.TypeNameIdentifier": "NotFound",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
           "Runtime.Name": "Components.IComponent"
         }
       },
       {
-        "HashCode": -1077282044,
+        "HashCode": -1117885060,
         "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Layout.NavMenu",
+        "Name": "RomanMatrixBuilder.Pages.NotFound",
         "AssemblyName": "RomanMatrixBuilder",
         "CaseSensitive": true,
         "TagMatchingRules": [
           {
-            "TagName": "RomanMatrixBuilder.Layout.NavMenu"
+            "TagName": "RomanMatrixBuilder.Pages.NotFound"
           }
         ],
         "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Layout.NavMenu",
-          "Common.TypeNameIdentifier": "NavMenu",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Layout",
+          "Common.TypeName": "RomanMatrixBuilder.Pages.NotFound",
+          "Common.TypeNameIdentifier": "NotFound",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1600840616,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.Pages.Index",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
+          "Common.TypeNameIdentifier": "Index",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1126164521,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.Pages.Index",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RomanMatrixBuilder.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
+          "Common.TypeNameIdentifier": "Index",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1491856902,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.App",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "RomanMatrixBuilder",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1491539398,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.App",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RomanMatrixBuilder.App"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.App",
+          "Common.TypeNameIdentifier": "App",
+          "Common.TypeNamespace": "RomanMatrixBuilder",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
         }
@@ -17155,23 +17007,8 @@
       "FileKind": "component"
     },
     {
-      "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\Pages\\Weather.razor",
-      "TargetPath": "Pages\\Weather.razor",
-      "FileKind": "component"
-    },
-    {
       "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\Pages\\NotFound.razor",
       "TargetPath": "Pages\\NotFound.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\Layout\\NavMenu.razor",
-      "TargetPath": "Layout\\NavMenu.razor",
-      "FileKind": "component"
-    },
-    {
-      "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\Pages\\Home.razor",
-      "TargetPath": "Pages\\Home.razor",
       "FileKind": "component"
     },
     {
@@ -17183,11 +17020,6 @@
       "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\_Imports.razor",
       "TargetPath": "_Imports.razor",
       "FileKind": "componentImport"
-    },
-    {
-      "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\Pages\\Counter.razor",
-      "TargetPath": "Pages\\Counter.razor",
-      "FileKind": "component"
     },
     {
       "FilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\App.razor",

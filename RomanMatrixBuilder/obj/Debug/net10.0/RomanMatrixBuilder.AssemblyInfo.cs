@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RomanMatrixBuilder")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11cf9cbe42166a3847be13c47ee1504ac38991fd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5068fc249dc18a2d62acf846c16651563878450e")]
 [assembly: System.Reflection.AssemblyProductAttribute("RomanMatrixBuilder")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RomanMatrixBuilder")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -31,14 +31,14 @@ jobs:
         with:
           dotnet-version: 10.0.x
           
-      # builds and publishes the app
-      - name: Publish .NET Project
-        run: dotnet publish RomanMatrixBuilder/RomanMatrixBuilder.csproj -c Release -o release --nologo
-      
       # Changes the base-tag in index.html from '/' to the subfolder string
       # The repository name needs to match your GitHub repository name exactly.
       - name: Change base-tag in index.html
-        run: sed -i 's/<base href="\/" \/>/<base href="\/dotnet_my_typing\/" \/>/g' release/wwwroot/index.html
+        run: sed -i 's/<base href="\/" \/>/<base href="\/dotnet_my_typing\/" \/>/g' RomanMatrixBuilder/wwwroot/index.html
+
+      # builds and publishes the app
+      - name: Publish .NET Project
+        run: dotnet publish RomanMatrixBuilder/RomanMatrixBuilder.csproj -c Release -o release --nologo
         
       # Fix Service Worker fetching wrong base URL on GitHub Pages
       - name: Fix Service Worker base URL
