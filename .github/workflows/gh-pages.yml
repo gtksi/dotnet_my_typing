@@ -44,6 +44,11 @@ jobs:
       - name: Fix Service Worker base URL
         run: sed -i 's/base\.href/base.href \+ "dotnet_my_typing\/"/g' release/wwwroot/service-worker.published.js || true
 
+      # Add .nojekyll file to tell GitHub Pages to not treat this as a Jekyll project.
+      # This allows files and folders starting with an underscore (like _framework/) to be served.
+      - name: Add .nojekyll file
+        run: touch release/wwwroot/.nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
