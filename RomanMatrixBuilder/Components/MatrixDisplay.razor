@@ -1,0 +1,58 @@
+@using RomanMatrixBuilder.Services
+
+<div class="matrix-container">
+    <div class="matrix-header">
+        <div class="empty-corner"></div>
+        <div class="vowel-header">A</div>
+        <div class="vowel-header">I</div>
+        <div class="vowel-header">U</div>
+        <div class="vowel-header">E</div>
+        <div class="vowel-header">O</div>
+    </div>
+
+    @foreach (var row in Rows)
+    {
+        // 例えば Stage に応じて表示する行を制限する
+        @if (GameState.CurrentStage >= row.RequiredStage)
+        {
+            <div class="matrix-row">
+                <div class="consonant-header">@row.Consonant</div>
+                @foreach (var vowel in Vowels)
+                {
+                    <div class="matrix-cell @(IsCellAcquired(row.Consonant, vowel) ? "acquired" : "")">
+                        <span class="cell-text">@(row.Consonant)@(vowel)</span>
+                    </div>
+                }
+            </div>
+        }
+    }
+</div>
+
+@code {
+    [Inject]
+    public GameStateService GameState { get; set; } = default!;
+
+    [Parameter]
+    public HashSet<string> AcquiredSyllables { get; set; } = new();
+
+    private readonly string[] Vowels = { "A", "I", "U", "E", "O" };
+
+    private readonly List<(string Consonant, int RequiredStage)> Rows = new()
+    {
+        ("", 1), // 母音のみ (ア行)
+        ("K", 2),
+        ("S", 2),
+        ("T", 2),
+        ("N", 3),
+        ("H", 3),
+        ("M", 3),
+        ("Y", 4),
+        ("R", 4),
+        ("W", 4)
+    };
+
+    private bool IsCellAcquired(string consonant, string vowel)
+    {
+        return AcquiredSyllables.Contains($"{consonant}{vowel}");
+    }
+}

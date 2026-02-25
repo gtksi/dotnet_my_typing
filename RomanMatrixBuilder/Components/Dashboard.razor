@@ -1,0 +1,50 @@
+@using RomanMatrixBuilder.Services
+
+<div class="dashboard-container">
+    <h1>よくできました！</h1>
+    <p class="subtitle">10問クリアおめでとう！</p>
+    
+    <div class="stats-box">
+        <div class="stat-item">
+            <span class="label">最大連続正解（コンボ）：</span>
+            <span class="value">@GameState.MaxSessionCombo 回！</span>
+        </div>
+        <div class="stat-item">
+            <span class="label">現在のステージ：</span>
+            <span class="value">Stage @GameState.CurrentStage</span>
+        </div>
+    </div>
+
+    <div class="actions">
+        <button class="btn primary" @onclick="OnNextSession">次の10問にちょうせん！</button>
+    </div>
+
+    @* 指導者向けモードは今回は簡易的なボタンにしておく *@
+    <div class="admin-section">
+        <p>【指導者向け】</p>
+        <button class="btn text-btn" @onclick="LevelUp">手動でステージを上げる (次行解放)</button>
+    </div>
+</div>
+
+@code {
+    [Inject]
+    public GameStateService GameState { get; set; } = default!;
+
+    [Parameter]
+    public EventCallback OnNextSessionRequest { get; set; }
+
+    private async Task OnNextSession()
+    {
+        GameState.ResetSession();
+        await OnNextSessionRequest.InvokeAsync();
+    }
+
+    private void LevelUp()
+    {
+        // 簡易的なステージ進行機能。最大 Stage 4
+        if (GameState.CurrentStage < 4)
+        {
+            GameState.SetStage(GameState.CurrentStage + 1);
+        }
+    }
+}

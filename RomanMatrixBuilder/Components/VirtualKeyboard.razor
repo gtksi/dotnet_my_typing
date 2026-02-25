@@ -1,0 +1,65 @@
+@using RomanMatrixBuilder.Models
+
+<div class="keyboard-container">
+    <div class="keyboard-row">
+        @foreach (var key in Row1)
+        {
+            <div class="@GetKeyClass(key)">@key</div>
+        }
+    </div>
+    <div class="keyboard-row">
+        <div class="spacer-half"></div>
+        @foreach (var key in Row2)
+        {
+            <div class="@GetKeyClass(key)">
+                @if (key == "F" || key == "J")
+                {
+                    <div class="anchor-ripple"></div>
+                }
+                <span style="position: relative; z-index: 1;">@key</span>
+            </div>
+        }
+        <div class="spacer-half"></div>
+    </div>
+    <div class="keyboard-row">
+        <div class="spacer-full"></div>
+        @foreach (var key in Row3)
+        {
+            <div class="@GetKeyClass(key)">@key</div>
+        }
+        <div class="spacer-full"></div>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public KeyboardState State { get; set; } = new();
+
+    private readonly string[] Row1 = { "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P" };
+    private readonly string[] Row2 = { "A", "S", "D", "F", "G", "H", "J", "K", "L" };
+    private readonly string[] Row3 = { "Z", "X", "C", "V", "B", "N", "M" };
+    private readonly string[] Vowels = { "A", "I", "U", "E", "O" };
+
+    private string GetKeyClass(string key)
+    {
+        var classes = new List<string> { "key" };
+        
+        if (Vowels.Contains(key)) classes.Add("vowel");
+        if (key == "F" || key == "J") classes.Add("anchor");
+        
+        if (State.NavigationTargetKey == key)
+        {
+            classes.Add("navigation-target");
+        }
+        if (State.HasError && State.LastErrorKey == key)
+        {
+            classes.Add("error-sink");
+        }
+        if (State.ExpectedKey == key && State.HasError)
+        {
+            classes.Add("expected-blink");
+        }
+
+        return string.Join(" ", classes);
+    }
+}
