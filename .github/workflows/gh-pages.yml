@@ -42,7 +42,7 @@ jobs:
         
       # Fix Service Worker fetching wrong base URL on GitHub Pages
       - name: Fix Service Worker base URL
-        run: sed -i 's/base\.href/base.href \+ "dotnet_my_typing\/"/g' release/wwwroot/service-worker.published.js || true
+        run: sed -i 's/const base = "\/";/const base = "\/dotnet_my_typing\/";/g' release/wwwroot/service-worker.js
 
       # Add .nojekyll file to tell GitHub Pages to not treat this as a Jekyll project.
       # This allows files and folders starting with an underscore (like _framework/) to be served.
