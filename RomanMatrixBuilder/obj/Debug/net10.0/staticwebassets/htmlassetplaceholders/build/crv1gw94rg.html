@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RomanMatrixBuilder</title>
     <base href="/" />
-    <link href="_framework/dotnet.yyt5t2e7yf.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-BrTKLM26MM+S8rCC7O3SGdPyPVoeSBPkzwmO9Woai50=" />
+    <link href="_framework/dotnet.iwvye76u7y.js" rel="preload" as="script" fetchpriority="high" crossorigin="anonymous" integrity="sha256-/v8AK4BF3+ybEIUR/9vtD5bODdYZhmxW6z86UO7u5MQ=" />
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
     <link rel="icon" type="image/png" href="favicon.png" />
@@ -18,9 +18,9 @@
   "imports": {
     "./_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.lib.module.js": "./_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.99zm1jdh75.lib.module.js",
     "./_framework/blazor.webassembly.js": "./_framework/blazor.webassembly.66stpp682q.js",
+    "./_framework/dotnet.js": "./_framework/dotnet.iwvye76u7y.js",
     "./_framework/dotnet.native.js": "./_framework/dotnet.native.69poregybn.js",
     "./_framework/dotnet.runtime.js": "./_framework/dotnet.runtime.q5rqv3xrhm.js",
-    "./_framework/dotnet.js": "./_framework/dotnet.yyt5t2e7yf.js",
     "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js",
     "./lib/bootstrap/dist/js/bootstrap.bundle.js": "./lib/bootstrap/dist/js/bootstrap.bundle.yyn062x5bd.js",
     "./lib/bootstrap/dist/js/bootstrap.esm.js": "./lib/bootstrap/dist/js/bootstrap.esm.8cwcg4g702.js",
@@ -34,12 +34,12 @@
     "./_content/Microsoft.DotNet.HotReload.WebAssembly.Browser/Microsoft.DotNet.HotReload.WebAssembly.Browser.lib.module.js": "sha256-A8e6zZwhOqf7lDQqbbCYcAUv4wGE9aQxOo4WyYxR//0=",
     "./_framework/blazor.webassembly.66stpp682q.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
     "./_framework/blazor.webassembly.js": "sha256-3lCWrko3zwspV40aQhs2S/IMkRSarnHRKIdkHhuXIBA=",
-    "./_framework/dotnet.js": "sha256-BrTKLM26MM+S8rCC7O3SGdPyPVoeSBPkzwmO9Woai50=",
+    "./_framework/dotnet.iwvye76u7y.js": "sha256-/v8AK4BF3+ybEIUR/9vtD5bODdYZhmxW6z86UO7u5MQ=",
+    "./_framework/dotnet.js": "sha256-/v8AK4BF3+ybEIUR/9vtD5bODdYZhmxW6z86UO7u5MQ=",
     "./_framework/dotnet.native.69poregybn.js": "sha256-JvdIvkSF0x6euoPT2QnQSMg2Gyv2oJbFeBi1XmWLYFU=",
     "./_framework/dotnet.native.js": "sha256-JvdIvkSF0x6euoPT2QnQSMg2Gyv2oJbFeBi1XmWLYFU=",
     "./_framework/dotnet.runtime.js": "sha256-ArknccFM1sHNVcih0x1h52AG+abNCoQjl6BlVrv3ePw=",
     "./_framework/dotnet.runtime.q5rqv3xrhm.js": "sha256-ArknccFM1sHNVcih0x1h52AG+abNCoQjl6BlVrv3ePw=",
-    "./_framework/dotnet.yyt5t2e7yf.js": "sha256-BrTKLM26MM+S8rCC7O3SGdPyPVoeSBPkzwmO9Woai50=",
     "./lib/bootstrap/dist/js/bootstrap.bundle.js": "sha256-pig5nCSLqy2ljB/lpw1p/ls5QQy5lFnFZlY/5vGg0Hc=",
     "./lib/bootstrap/dist/js/bootstrap.bundle.min.493y06b0oq.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
     "./lib/bootstrap/dist/js/bootstrap.bundle.min.js": "sha256-CDOy6cOibCWEdsRiZuaHf8dSGGJRYuBGC+mjoJimHGw=",
@@ -72,6 +72,41 @@
     </div>
     <script src="_framework/blazor.webassembly.66stpp682q.js"></script>
     <script>navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' });</script>
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        const audioCtx = new AudioContext();
+
+        window.playAudio = (type) => {
+            try {
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+                const oscillator = audioCtx.createOscillator();
+                const gainNode = audioCtx.createGain();
+                oscillator.connect(gainNode);
+                gainNode.connect(audioCtx.destination);
+
+                if (type === 'sound-correct') {
+                    // Chime
+                    oscillator.type = 'sine';
+                    oscillator.frequency.setValueAtTime(880, audioCtx.currentTime); // A5
+                    oscillator.frequency.setValueAtTime(1108.73, audioCtx.currentTime + 0.1); // C#6
+                    gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.3);
+                    oscillator.start();
+                    oscillator.stop(audioCtx.currentTime + 0.3);
+                } else {
+                    // Dull thud
+                    oscillator.type = 'triangle';
+                    oscillator.frequency.setValueAtTime(150, audioCtx.currentTime);
+                    oscillator.frequency.exponentialRampToValueAtTime(40, audioCtx.currentTime + 0.1);
+                    gainNode.gain.setValueAtTime(0.5, audioCtx.currentTime);
+                    gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.1);
+                    oscillator.start();
+                    oscillator.stop(audioCtx.currentTime + 0.1);
+                }
+            } catch (e) { }
+        };
+        window.focusElement = (element) => { if (element) element.focus(); };
+    </script>
 </body>
 
 </html>

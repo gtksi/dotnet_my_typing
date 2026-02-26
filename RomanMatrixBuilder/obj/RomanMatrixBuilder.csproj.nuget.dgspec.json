@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {}
+    "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {}
   },
   "projects": {
-    "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {
+    "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
+        "projectUniqueName": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
         "projectName": "RomanMatrixBuilder",
-        "projectPath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
+        "projectPath": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
         "packagesPath": "C:\\Users\\gotok\\.nuget\\packages\\",
-        "outputPath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\obj\\",
+        "outputPath": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -5,7 +5,7 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
   "mainAssemblyName": "RomanMatrixBuilder",
   "applicationEnvironment": "Development",
   "resources": {
-    "hash": "sha256-VeVw1TeMvmNgXNvT/jwvhKJMbcAmt0Aoi1ADuKkBtUo=",
+    "hash": "sha256-9Mcv/ulHwmC19ZdN/mt6VgzaIe5Cxkf3y+Mkkk51FHU=",
     "jsModuleNative": [
       {
         "name": "dotnet.native.69poregybn.js"
@@ -1248,16 +1248,16 @@ var e=!1;const t=async()=>WebAssembly.validate(new Uint8Array([0,97,115,109,1,0,
       },
       {
         "virtualPath": "RomanMatrixBuilder.wasm",
-        "name": "RomanMatrixBuilder.t8bk4v2t8z.wasm",
-        "integrity": "sha256-E8rhjt781j/9fHFlxV8M/tK3T7UXlvIzi3cC4ZCGZN4=",
+        "name": "RomanMatrixBuilder.xfsmptmg5c.wasm",
+        "integrity": "sha256-feYZvSMBWgI7G6bQNAG9SQCw/3Thzn2W3GheRElSz/M=",
         "cache": "force-cache"
       }
     ],
     "pdb": [
       {
         "virtualPath": "RomanMatrixBuilder.pdb",
-        "name": "RomanMatrixBuilder.y7qj6bempw.pdb",
-        "integrity": "sha256-fj1CqjenO0tQe/eVWtfJRWkohUQ4WQpnq6+rQDMbfWs=",
+        "name": "RomanMatrixBuilder.o4nr77frtp.pdb",
+        "integrity": "sha256-2EBVu0DdgHtwdCeiUnEX5skhemXBEiRlMzqi/u2JC/E=",
         "cache": "force-cache"
       }
     ],

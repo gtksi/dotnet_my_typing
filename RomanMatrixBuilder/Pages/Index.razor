@@ -1,4 +1,6 @@
 @page "/"
+@page "/dotnet_my_typing"
+@page "/dotnet_my_typing/"
 @using RomanMatrixBuilder.Components
 @using RomanMatrixBuilder.Models
 @using RomanMatrixBuilder.Services
@@ -16,19 +18,19 @@
         <div class="target-panel">
             @if (GameState.IsSessionComplete)
             {
-                <div class="message" style="display:none;"></div>
+                    <div class="message" style="display:none;"></div>
             }
             else if (CurrentProblem != null)
             {
-                <div class="hiragana">@CurrentProblem.Hiragana</div>
-                <div class="romaji">
+                    <div class="hiragana">@CurrentProblem.Hiragana</div>
+                    <div class="romaji">
                     @* すでに入力された部分と未入力部分を分ける等 *@
-                    <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
-                </div>
+                        <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
+                    </div>
             }
             else
             {
-                <div class="message">スペースキーを押して開始！</div>
+                    <div class="message">スペースキーを押して開始！</div>
             }
         </div>
 
@@ -40,7 +42,7 @@
             コンボ: @(new string('★', GameState.CurrentCombo))
             @if (GameState.CurrentCombo == 0)
             {
-                <span>☆</span>
+                    <span>☆</span>
             }
         </div>
     </div>
@@ -48,14 +50,14 @@
     <div class="bottom-area">
         @if (GameState.IsSessionComplete)
         {
-            <!-- ダッシュボードを画面全体に被せるのではなく、このままエリアをハックして表示する簡易実装（PWAとしてはオーバーレイの方がきれいだが今回はコンポーネント入れ替えで） -->
-            <div style="position: absolute; top:0; left:0; width:100vw; height:100vh; z-index: 100;">
-                <Dashboard OnNextSessionRequest="StartNextSession" />
-            </div>
+                <!-- ダッシュボードを画面全体に被せるのではなく、このままエリアをハックして表示する簡易実装（PWAとしてはオーバーレイの方がきれいだが今回はコンポーネント入れ替えで） -->
+                <div style="position: absolute; top:0; left:0; width:100vw; height:100vh; z-index: 100;">
+                    <Dashboard OnNextSessionRequest="StartNextSession" />
+                </div>
         }
         else
         {
-            <VirtualKeyboard State="Keyboard" />
+                <VirtualKeyboard State="Keyboard" />
         }
     </div>
 

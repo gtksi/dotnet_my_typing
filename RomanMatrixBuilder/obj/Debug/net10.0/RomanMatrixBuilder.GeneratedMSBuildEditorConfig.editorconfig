@@ -17,45 +17,45 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = RomanMatrixBuilder
 build_property.RootNamespace = RomanMatrixBuilder
-build_property.ProjectDir = d:\repos\gtksi\dotnet_my_typing\RomanMatrixBuilder\
+build_property.ProjectDir = D:\repos\gtksi\dotnet_my_typing\RomanMatrixBuilder\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 9.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = d:\repos\gtksi\dotnet_my_typing\RomanMatrixBuilder
+build_property.MSBuildProjectDirectory = D:\repos\gtksi\dotnet_my_typing\RomanMatrixBuilder
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/App.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Pages/NotFound.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Pages/NotFound.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTm90Rm91bmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/_Imports.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Components/Dashboard.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Components/Dashboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEYXNoYm9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-kx12wweurg
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Components/MatrixDisplay.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Components/MatrixDisplay.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xNYXRyaXhEaXNwbGF5LnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-4bc3q92mig
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Components/VirtualKeyboard.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Components/VirtualKeyboard.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xWaXJ0dWFsS2V5Ym9hcmQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-8rvssqtop9
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Layout/MainLayout.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-346rbl4zhb
 
-[d:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Pages/Index.razor]
+[D:/repos/gtksi/dotnet_my_typing/RomanMatrixBuilder/Pages/Index.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-if9v0xq4as
