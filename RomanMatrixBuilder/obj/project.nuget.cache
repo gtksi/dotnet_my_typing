@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/tB5sxcnP1M=",
+  "dgSpecHash": "oFS9tWpPYAY=",
   "success": true,
-  "projectFilePath": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
+  "projectFilePath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gotok\\.nuget\\packages\\blazored.localstorage\\4.3.0\\blazored.localstorage.4.3.0.nupkg.sha512",
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.aspnetcore.app.internal.assets\\10.0.3\\microsoft.aspnetcore.app.internal.assets.10.0.3.nupkg.sha512",
@@ -14,6 +14,7 @@
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\10.0.3\\microsoft.aspnetcore.components.webassembly.10.0.3.nupkg.sha512",
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.devserver\\10.0.3\\microsoft.aspnetcore.components.webassembly.devserver.10.0.3.nupkg.sha512",
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.aspnetcore.metadata\\10.0.3\\microsoft.aspnetcore.metadata.10.0.3.nupkg.sha512",
+    "C:\\Users\\gotok\\.nuget\\packages\\microsoft.dotnet.hotreload.webassembly.browser\\10.0.103\\microsoft.dotnet.hotreload.webassembly.browser.10.0.103.nupkg.sha512",
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.3\\microsoft.extensions.configuration.10.0.3.nupkg.sha512",
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.3\\microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
     "C:\\Users\\gotok\\.nuget\\packages\\microsoft.extensions.configuration.binder\\10.0.3\\microsoft.extensions.configuration.binder.10.0.3.nupkg.sha512",

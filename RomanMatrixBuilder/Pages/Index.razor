@@ -16,19 +16,19 @@
         <div class="target-panel">
             @if (GameState.IsSessionComplete)
             {
-                    <div class="message" style="display:none;"></div>
+                <div class="message" style="display:none;"></div>
             }
             else if (CurrentProblem != null)
             {
-                    <div class="hiragana">@CurrentProblem.Hiragana</div>
-                    <div class="romaji">
+                <div class="hiragana">@CurrentProblem.Hiragana</div>
+                <div class="romaji">
                     @* すでに入力された部分と未入力部分を分ける等 *@
-                        <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
-                    </div>
+                    <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
+                </div>
             }
             else
             {
-                    <div class="message">スペースキーを押して開始！</div>
+                <div class="message">スペースキーを押して開始！</div>
             }
         </div>
 
@@ -48,20 +48,17 @@
     <div class="bottom-area">
         @if (GameState.IsSessionComplete)
         {
-                <!-- ダッシュボードを画面全体に被せるのではなく、このままエリアをハックして表示する簡易実装（PWAとしてはオーバーレイの方がきれいだが今回はコンポーネント入れ替えで） -->
-                <div style="position: absolute; top:0; left:0; width:100vw; height:100vh; z-index: 100;">
-                    <Dashboard OnNextSessionRequest="StartNextSession" />
-                </div>
+            <!-- ダッシュボードを画面全体に被せるのではなく、このままエリアをハックして表示する簡易実装（PWAとしてはオーバーレイの方がきれいだが今回はコンポーネント入れ替えで） -->
+            <div style="position: absolute; top:0; left:0; width:100vw; height:100vh; z-index: 100;">
+                <Dashboard OnNextSessionRequest="StartNextSession" />
+            </div>
         }
         else
         {
-                <VirtualKeyboard State="Keyboard" />
+            <VirtualKeyboard State="Keyboard" />
         }
     </div>
 
-    <!-- 音声アセット (仮) -->
-    <audio id="sound-correct" src="sounds/correct.mp3" preload="auto"></audio>
-    <audio id="sound-error" src="sounds/error.mp3" preload="auto"></audio>
 </div>
 
 @code {
@@ -104,8 +101,8 @@
 
         // すべての許可パターンのうち、現在の入力バッファで始まっているものがあるかチェック
         var matchingPatterns = CurrentProblem.AllowedRomajiList
-            .Where(p => p.StartsWith(CurrentInputBuffer))
-            .ToList();
+        .Where(p => p.StartsWith(CurrentInputBuffer))
+        .ToList();
 
         if (matchingPatterns.Any())
         {
@@ -115,7 +112,7 @@
             // 完全に一致するパターンがあれば正解
             if (matchingPatterns.Any(p => p == CurrentInputBuffer))
             {
-                // 正解！ 
+                // 正解！
                 try { _ = JS.InvokeVoidAsync("playAudio", "sound-correct"); } catch { }
 
                 // 正解の文字（母音）を取得してMatrixのキーにする

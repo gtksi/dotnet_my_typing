@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {}
+    "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {}
   },
   "projects": {
-    "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {
+    "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
+        "projectUniqueName": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
         "projectName": "RomanMatrixBuilder",
-        "projectPath": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
+        "projectPath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\RomanMatrixBuilder.csproj",
         "packagesPath": "C:\\Users\\gotok\\.nuget\\packages\\",
-        "outputPath": "D:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\obj\\",
+        "outputPath": "d:\\repos\\gtksi\\dotnet_my_typing\\RomanMatrixBuilder\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +69,11 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[10.0.3, )"
+            },
+            "Microsoft.DotNet.HotReload.WebAssembly.Browser": {
+              "target": "Package",
+              "version": "[10.0.103, )",
+              "autoReferenced": true
             },
             "Microsoft.NET.ILLink.Tasks": {
               "suppressParent": "All",
