@@ -1,0 +1,18 @@
+# Build results
+release/
+bin/
+obj/
+
+# .NET
+*.user
+*.suo
+*.cache
+*.vs/
+
+# Temporary files
+temp.css
+*.tmp
+
+# OS files
+Thumbs.db
+.DS_Store
