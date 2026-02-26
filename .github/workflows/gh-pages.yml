@@ -44,6 +44,14 @@ jobs:
       - name: Fix Service Worker base URL
         run: sed -i 's/const base = "\/";/const base = "\/dotnet_my_typing\/";/g' release/wwwroot/service-worker.js
 
+      # Force Service Worker Cache Busting by changing the version hash in service-worker-assets.js
+      - name: Force Cache Busting
+        run: sed -i 's/cacheNamePrefix}${self.assetsManifest.version}/cacheNamePrefix}${self.assetsManifest.version}${Math.random()}/g' release/wwwroot/service-worker.js
+
+      # Add SPA Fallback for GitHub Pages routing
+      - name: Create SPA Fallback
+        run: cp release/wwwroot/index.html release/wwwroot/404.html
+
       # Add .nojekyll file to tell GitHub Pages to not treat this as a Jekyll project.
       # This allows files and folders starting with an underscore (like _framework/) to be served.
       - name: Add .nojekyll file
