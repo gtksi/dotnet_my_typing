@@ -331,43 +331,6 @@
         }
       },
       {
-        "HashCode": -1267514727,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Index",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "Index"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
-          "Common.TypeNameIdentifier": "Index",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
-        "HashCode": 1833289902,
-        "Kind": "Components.Component",
-        "Name": "RomanMatrixBuilder.Pages.Index",
-        "AssemblyName": "RomanMatrixBuilder",
-        "CaseSensitive": true,
-        "TagMatchingRules": [
-          {
-            "TagName": "RomanMatrixBuilder.Pages.Index"
-          }
-        ],
-        "Metadata": {
-          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
-          "Common.TypeNameIdentifier": "Index",
-          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
-          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
-          "Runtime.Name": "Components.IComponent"
-        }
-      },
-      {
         "HashCode": -1396810337,
         "Kind": "Components.Component",
         "Name": "RomanMatrixBuilder.Pages.NotFound",
@@ -399,6 +362,43 @@
         "Metadata": {
           "Common.TypeName": "RomanMatrixBuilder.Pages.NotFound",
           "Common.TypeNameIdentifier": "NotFound",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": -1267514727,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.Pages.Index",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "Index"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
+          "Common.TypeNameIdentifier": "Index",
+          "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
+          "Runtime.Name": "Components.IComponent"
+        }
+      },
+      {
+        "HashCode": 1833289902,
+        "Kind": "Components.Component",
+        "Name": "RomanMatrixBuilder.Pages.Index",
+        "AssemblyName": "RomanMatrixBuilder",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "RomanMatrixBuilder.Pages.Index"
+          }
+        ],
+        "Metadata": {
+          "Common.TypeName": "RomanMatrixBuilder.Pages.Index",
+          "Common.TypeNameIdentifier": "Index",
           "Common.TypeNamespace": "RomanMatrixBuilder.Pages",
           "Components.NameMatch": "Components.FullyQualifiedNameMatch",
           "Runtime.Name": "Components.IComponent"
