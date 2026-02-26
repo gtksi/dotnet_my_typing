@@ -31,8 +31,24 @@
         <a href="." class="reload">Reload</a>
         <span class="dismiss">🗙</span>
     </div>
-    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
-    <script>navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' });</script>
+    <script>
+        // Diagnostic: catch ALL errors including silent ones
+        window.onerror = function (msg, url, line, col, error) {
+            console.error('[BLAZOR-DIAG] onerror:', msg, url, line, col, error);
+            var d = document.getElementById('blazor-error-ui');
+            if (d) { d.style.display = 'block'; d.textContent = 'Error: ' + msg; }
+        };
+        window.addEventListener('unhandledrejection', function (e) {
+            console.error('[BLAZOR-DIAG] unhandledrejection:', e.reason);
+        });
+    </script>
+    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"
+        onerror="console.error('[BLAZOR-DIAG] Failed to load blazor.webassembly.js')"></script>
+    <script>
+        navigator.serviceWorker.register('service-worker.js', { updateViaCache: 'none' })
+            .then(function (reg) { console.log('[BLAZOR-DIAG] SW registered:', reg.scope); })
+            .catch(function (err) { console.error('[BLAZOR-DIAG] SW registration failed:', err); });
+    </script>
     <script>
         const AudioContext = window.AudioContext || window.webkitAudioContext;
         const audioCtx = new AudioContext();

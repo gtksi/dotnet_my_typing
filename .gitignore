@@ -1,12 +1,12 @@
 # Build results
 release/
-bin/
-obj/
+release_test/
+**/bin/
+**/obj/
 
 # .NET
 *.user
 *.suo
-*.cache
 *.vs/
 
 # Temporary files

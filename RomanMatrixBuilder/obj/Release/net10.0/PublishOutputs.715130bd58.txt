@@ -1,4 +1,0 @@
-D:\repos\gtksi\dotnet_my_typing\release\wwwroot\index.html
-D:\repos\gtksi\dotnet_my_typing\release\RomanMatrixBuilder.runtimeconfig.json
-D:\repos\gtksi\dotnet_my_typing\release\dotnet.js
-D:\repos\gtksi\dotnet_my_typing\release\web.config
