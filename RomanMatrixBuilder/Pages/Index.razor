@@ -83,8 +83,16 @@
 
     private void HandleKeyDown(KeyboardEventArgs e)
     {
-        // ダッシュボード表示中はキー入力無視
-        if (GameState.IsSessionComplete) return;
+        // ダッシュボード表示中：Space/Enterで次のセッションへ
+        if (GameState.IsSessionComplete)
+        {
+            if (e.Key == " " || e.Key == "Enter")
+            {
+                GameState.ResetSession();
+                StartNextSession();
+            }
+            return;
+        }
 
         if (e.Key == " " && CurrentProblem == null)
         {

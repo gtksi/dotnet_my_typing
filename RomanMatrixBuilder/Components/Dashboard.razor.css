@@ -45,6 +45,14 @@ h1 {
 
 .actions {
     margin-bottom: 50px;
+    text-align: center;
+}
+
+.key-hint {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #95a5a6;
+    letter-spacing: 1px;
 }
 
 .btn {

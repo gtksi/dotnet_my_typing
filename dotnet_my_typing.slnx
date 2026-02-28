@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="RomanMatrixBuilder.Tests/RomanMatrixBuilder.Tests.csproj" />
+  <Project Path="RomanMatrixBuilder/RomanMatrixBuilder.csproj" />
+</Solution>
