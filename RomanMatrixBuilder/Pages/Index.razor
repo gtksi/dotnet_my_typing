@@ -66,6 +66,7 @@
     private KeyboardState Keyboard = new();
     private TypingProblem? CurrentProblem;
     private HashSet<string> AcquiredPoints = new();
+    private bool IsTransitioning = false;
 
     private string CurrentInputBuffer = "";
 
@@ -81,8 +82,11 @@
         }
     }
 
-    private void HandleKeyDown(KeyboardEventArgs e)
+    private async Task HandleKeyDown(KeyboardEventArgs e)
     {
+        // 遷移中は何もしない
+        if (IsTransitioning) return;
+
         // ダッシュボード表示中：Space/Enterで次のセッションへ
         if (GameState.IsSessionComplete)
         {
@@ -116,6 +120,7 @@
         {
             // 正解ルートに乗っている
             Keyboard.HasError = false;
+            GameState.RegisterKeystroke(true);
 
             // 完全に一致するパターンがあれば正解
             if (matchingPatterns.Any(p => p == CurrentInputBuffer))
@@ -128,7 +133,7 @@
                 AcquiredPoints.Add($"{CurrentProblem.MatrixRow}{vowel}");
 
                 GameState.AddCombo();
-                GameState.GoalProblem();
+                GameState.GoalProblem(CurrentProblem.PrimaryRomaji);
 
                 if (GameState.IsSessionComplete)
                 {
@@ -137,7 +142,7 @@
                 }
                 else
                 {
-                    StartNewProblem();
+                    await TransitionToNewProblem();
                 }
             }
             else
@@ -153,6 +158,7 @@
             // いずれのパターンにもマッチしない＝エラー
             Keyboard.HasError = true;
             Keyboard.LastErrorKey = inputChar;
+            GameState.RegisterKeystroke(false);
 
             try { _ = JS.InvokeVoidAsync("playAudio", "sound-error"); } catch { }
 
@@ -170,10 +176,24 @@
         CurrentInputBuffer = "";
         Keyboard.HasError = false;
 
-        CurrentProblem = Generator.GenerateProblem(GameState.CurrentStage);
+        CurrentProblem = Generator.GenerateProblem(GameState.CurrentStage, GameState.CharacterCorrectCounts);
 
         Keyboard.ExpectedKey = CurrentProblem.PrimaryRomaji[0].ToString();
         Keyboard.NavigationTargetKey = Keyboard.ExpectedKey;
+    }
+
+    private async Task TransitionToNewProblem()
+    {
+        IsTransitioning = true;
+        // 一旦画面をクリアして「次の問題」であることを視覚的に伝える
+        CurrentProblem = null;
+        StateHasChanged();
+        
+        await Task.Delay(250); // 250msのタメを作る
+        
+        StartNewProblem();
+        IsTransitioning = false;
+        StateHasChanged();
     }
 
     private void StartNextSession()

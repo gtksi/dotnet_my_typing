@@ -10,9 +10,21 @@
             <span class="value">@GameState.MaxSessionCombo 回！</span>
         </div>
         <div class="stat-item">
-            <span class="label">現在のフェーズ：</span>
-            <span class="value">マトリクス拡張中</span>
+            <span class="label">正確さ（このセッション）：</span>
+            <span class="value">@((GameState.SessionAccuracy * 100).ToString("0.0")) %</span>
         </div>
+        @if (GameState.StageJustCleared)
+        {
+            <div class="stat-item highlight">
+                <span class="value">✨ 新しい文字が解放されました！ ✨</span>
+            </div>
+        }
+        else if (!string.IsNullOrEmpty(GameState.NextStageHint))
+        {
+            <div class="stat-item hint">
+                <span class="value" style="font-size: 20px; color: #f39c12;">💡 @GameState.NextStageHint</span>
+            </div>
+        }
     </div>
 
     <div class="actions">

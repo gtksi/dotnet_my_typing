@@ -65,7 +65,7 @@ public class ProblemGenerator
         )}
     };
 
-    public TypingProblem GenerateProblem(int currentStage)
+    public TypingProblem GenerateProblem(int currentStage, Dictionary<string, int> charCounts)
     {
         // 現在のステージで解放されている行(Key)を取得
         var availableRows = new List<string>();
@@ -75,19 +75,42 @@ public class ProblemGenerator
         if (currentStage >= 3) availableRows.AddRange(new[] { "N", "H", "M" });
         if (currentStage >= 4) availableRows.AddRange(new[] { "Y", "R", "W" });
 
-        // ランダムに行を選ぶ
-        var selectedRowKey = availableRows[_random.Next(availableRows.Count)];
-        var rowData = _matrixData[selectedRowKey];
+        var allAvailableChars = new List<(string RowKey, int CharIndex)>();
+        foreach (var rowKey in availableRows)
+        {
+            var rd = _matrixData[rowKey];
+            for (int i = 0; i < rd.Hiragana.Length; i++)
+            {
+                allAvailableChars.Add((rowKey, i));
+            }
+        }
 
-        // ランダムにその行の文字（母音）を選ぶ
-        var charIndex = _random.Next(rowData.Hiragana.Length);
+        var unmasteredChars = allAvailableChars.Where(c =>
+        {
+            var pRomaji = _matrixData[c.RowKey].Primary[c.CharIndex];
+            return !charCounts.ContainsKey(pRomaji) || charCounts[pRomaji] < 3;
+        }).ToList();
+
+        (string RowKey, int CharIndex) selected;
+
+        // 80%の確率で未習熟の文字から選出、20%または未習熟がない場合は全体から選出
+        if (unmasteredChars.Any() && _random.NextDouble() < 0.8)
+        {
+            selected = unmasteredChars[_random.Next(unmasteredChars.Count)];
+        }
+        else
+        {
+            selected = allAvailableChars[_random.Next(allAvailableChars.Count)];
+        }
+
+        var rowData = _matrixData[selected.RowKey];
 
         return new TypingProblem
         {
-            Hiragana = rowData.Hiragana[charIndex],
-            PrimaryRomaji = rowData.Primary[charIndex],
-            AllowedRomajiList = rowData.Allowed[charIndex],
-            MatrixRow = selectedRowKey
+            Hiragana = rowData.Hiragana[selected.CharIndex],
+            PrimaryRomaji = rowData.Primary[selected.CharIndex],
+            AllowedRomajiList = rowData.Allowed[selected.CharIndex],
+            MatrixRow = selected.RowKey
         };
     }
 }
