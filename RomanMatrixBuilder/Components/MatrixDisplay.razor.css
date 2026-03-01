@@ -22,12 +22,12 @@
 .empty-corner,
 .consonant-header,
 .vowel-header {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .vowel-header {
@@ -40,8 +40,8 @@
 }
 
 .matrix-cell {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
     border: 2px solid #7f8c8d;
     background-color: transparent;
     border-radius: 4px;
@@ -62,5 +62,5 @@
 }
 
 .cell-text {
-    font-size: 14px;
+    font-size: 12px;
 }

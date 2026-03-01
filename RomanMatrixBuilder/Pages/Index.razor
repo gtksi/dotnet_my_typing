@@ -26,7 +26,7 @@
                     <span class="typed">@GetTypedPortion()</span><span class="untyped">@GetUntypedPortion()</span>
                 </div>
             }
-            else
+            else if (!IsTransitioning)
             {
                 <div class="message">スペースキーを押して開始！</div>
             }
@@ -188,9 +188,9 @@
         // 一旦画面をクリアして「次の問題」であることを視覚的に伝える
         CurrentProblem = null;
         StateHasChanged();
-        
+
         await Task.Delay(250); // 250msのタメを作る
-        
+
         StartNewProblem();
         IsTransitioning = false;
         StateHasChanged();

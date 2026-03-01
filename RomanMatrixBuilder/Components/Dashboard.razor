@@ -36,6 +36,10 @@
     <div class="admin-section">
         <p>【指導者向け】</p>
         <button class="btn text-btn" @onclick="LevelUp">手動で次の行を解放する</button>
+        @if (ShowManualUnlockMessage)
+        {
+            <p class="unlock-msg">手動で解放しました！</p>
+        }
     </div>
 </div>
 
@@ -46,18 +50,26 @@
     [Parameter]
     public EventCallback OnNextSessionRequest { get; set; }
 
+    private bool ShowManualUnlockMessage = false;
+
     private async Task OnNextSession()
     {
         GameState.ResetSession();
         await OnNextSessionRequest.InvokeAsync();
     }
 
-    private void LevelUp()
+    private async Task LevelUp()
     {
         // 簡易的なステージ進行機能。最大 Stage 4
         if (GameState.CurrentStage < 4)
         {
             GameState.SetStage(GameState.CurrentStage + 1);
+            ShowManualUnlockMessage = true;
+            StateHasChanged();
+            
+            await Task.Delay(2000);
+            ShowManualUnlockMessage = false;
+            StateHasChanged();
         }
     }
 }

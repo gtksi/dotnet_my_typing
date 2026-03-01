@@ -17,19 +17,24 @@
     gap: 8px;
 }
 
-.spacer-half { width: 25px; }
-.spacer-full { width: 50px; }
+.spacer-half {
+    width: 25px;
+}
+
+.spacer-full {
+    width: 50px;
+}
 
 .key {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     border-radius: 8px;
     background-color: #ecf0f1;
     color: #34495e;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: bold;
     font-family: 'Courier New', Courier, monospace;
     box-shadow: 0 4px 0 #bdc3c7;
@@ -59,8 +64,15 @@
 }
 
 @keyframes ripple {
-    0% { transform: scale(0.5); opacity: 1; }
-    100% { transform: scale(1.5); opacity: 0; }
+    0% {
+        transform: scale(0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
 }
 
 .key.navigation-target {
@@ -81,6 +93,13 @@
 }
 
 @keyframes blink {
-    from { background-color: #ecf0f1; }
-    to { background-color: #2ecc71; color: white; box-shadow: 0 0 15px #2ecc71; }
+    from {
+        background-color: #ecf0f1;
+    }
+
+    to {
+        background-color: #2ecc71;
+        color: white;
+        box-shadow: 0 0 15px #2ecc71;
+    }
 }
